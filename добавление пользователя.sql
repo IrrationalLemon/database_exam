@@ -1,0 +1,11 @@
+USE master
+GO
+
+CREATE LOGIN Alexeeva WITH PASSWORD = '123'
+GO
+
+USE [Books]
+GO
+CREATE USER Polina FOR LOGIN Alexeeva
+
+ALTER ROLE [db_owner] ADD MEMBER Polina
